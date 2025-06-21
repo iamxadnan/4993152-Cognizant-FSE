@@ -6,7 +6,7 @@ public class Logger {
     private Logger(){
 
     }
-   
+   //this here we created a singleton class using lazy way of initialization
     public static Logger getLogger(){
         if(logger==null){
             logger=new Logger();
@@ -16,4 +16,12 @@ public class Logger {
         }
         return logger;
     }
+
+    //now we ahre going to create same singleton class using eager way of initializaton
+    
+    private static Logger log=new Logger();
+    public static Logger getEagerLogger(){
+        return log;
+    }
+    
 }
