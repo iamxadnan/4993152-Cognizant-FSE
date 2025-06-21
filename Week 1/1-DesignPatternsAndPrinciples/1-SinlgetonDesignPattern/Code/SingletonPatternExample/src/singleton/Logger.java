@@ -23,5 +23,8 @@ public class Logger {
     public static Logger getEagerLogger(){
         return log;
     }
+
+
+    
     
 }
