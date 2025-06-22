@@ -17,16 +17,13 @@ public class Main {
                 System.out.println("Product not found.");
                 break;
             }
-        
             if(p[i].ProductId==n){
                 System.out.println("Found the product at the index "+i);
                 System.out.println(p[i]);
                 break;
             }
-           
-
-           
         }
+        sc.close();
         
     }
 }
