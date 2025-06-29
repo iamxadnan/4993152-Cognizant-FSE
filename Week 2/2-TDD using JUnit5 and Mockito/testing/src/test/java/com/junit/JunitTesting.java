@@ -1,40 +1,57 @@
 package com.junit;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.*;
 
-public class JunitTesting{
 
-    Arthemetic calculator = new Arthemetic();
+public class JunitTesting {
+    private Arthemetic calculator;
+
+    @Before
+    public void setUp() {
+        calculator=new Arthemetic();
+    }
+
+    @After
+    public void tearDown() {
+        calculator=null;
+    }
 
     @Test
     public void testAdd() {
-        assertEquals("Addition should return correct sum", 5, calculator.add(2, 3));
+        int a=2,b=3;
+        int result=calculator.add(a,b);
+        assertEquals(5,result);
     }
 
     @Test
     public void testIsEvenTrue() {
-        assertTrue("4 should be even", calculator.isEven(4));
+        int number=4;
+        boolean result=calculator.isEven(number);
+        assertTrue(result);
     }
 
     @Test
     public void testIsEvenFalse() {
-        assertFalse("5 should not be even", calculator.isEven(5));
+        int number=5;
+        boolean result=calculator.isEven(number);
+        assertFalse(result);
     }
 
     @Test
-    public void testGetGreetingNotNull() {
-        assertNotNull("Greeting should not be null", calculator.getGreeting("Adnan"));
-    }
-
-    @Test
-    public void testGreetingContent() {
-        assertEquals("Hello, Adnan", calculator.getGreeting("Adnan"));
+    public void testGetGreetingWithName() {
+        String name="Adnan";
+        String result=calculator.getGreeting(name);
+        assertEquals("Hello, Adnan",result);
     }
 
     @Test
     public void testGetGreetingWithNull() {
-        assertNull("Should return null for null input", calculator.getGreeting(null));
+        String name=null;
+        String result=calculator.getGreeting(name);
+        assertNull(result);
     }
-
 }
