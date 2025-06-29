@@ -31,4 +31,10 @@ public class JunitTesting{
     public void testGreetingContent() {
         assertEquals("Hello, Adnan", calculator.getGreeting("Adnan"));
     }
+
+    @Test
+    public void testGetGreetingWithNull() {
+        assertNull("Should return null for null input", calculator.getGreeting(null));
+    }
+
 }
