@@ -32,7 +32,7 @@ public class OrmLearnApplication implements CommandLineRunner {
         countryService.getAllCountries().forEach(c -> 
             System.out.println(c.getCode() + " - " + c.getName())
         );
-        countryService.addCountryHibernate("IN", "India");
+        countryService.addCountryHibernate("IRN", "Iran");
         countryService.addCountryHibernate("US", "United States");
     }
 

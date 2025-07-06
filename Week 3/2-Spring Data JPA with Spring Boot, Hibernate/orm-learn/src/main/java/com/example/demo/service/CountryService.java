@@ -42,7 +42,7 @@ public class CountryService {
             Country country = new Country();
             country.setCode(code);
             country.setName(name);
-            
+            session.save(country);
             tx.commit();
             System.out.println("Country saved: " + code);
         } catch (Exception e) {
