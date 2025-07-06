@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-OrmLearnApplication<orm-learn>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.demo.OrmLearnApplication",
+            "projectName": "orm-learn",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

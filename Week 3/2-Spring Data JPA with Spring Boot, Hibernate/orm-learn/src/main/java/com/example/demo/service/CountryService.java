@@ -2,6 +2,12 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Country;
 import com.example.demo.repository.CountryRepository;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -17,15 +23,33 @@ public class CountryService {
         return countryRepository.findAll();
     }
 
-    public Country getCountry(String code) {
-        return countryRepository.findById(code).orElse(null);
-    }
+
 
     public Country addCountry(Country country) {
         return countryRepository.save(country);
     }
 
-    public void deleteCountry(String code) {
-        countryRepository.deleteById(code);
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    public void addCountryHibernate(String code, String name) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = null;
+
+        try {
+            tx = session.beginTransaction();
+            Country country = new Country();
+            country.setCode(code);
+            country.setName(name);
+            
+            tx.commit();
+            System.out.println("Country saved: " + code);
+        } catch (Exception e) {
+            if (tx != null) tx.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
     }
 }

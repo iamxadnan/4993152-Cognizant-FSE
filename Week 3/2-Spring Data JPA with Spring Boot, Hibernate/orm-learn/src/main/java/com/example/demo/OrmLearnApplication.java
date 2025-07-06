@@ -2,6 +2,8 @@ package com.example.demo;
 
 import com.example.demo.entity.Country;
 import com.example.demo.service.CountryService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,5 +32,8 @@ public class OrmLearnApplication implements CommandLineRunner {
         countryService.getAllCountries().forEach(c -> 
             System.out.println(c.getCode() + " - " + c.getName())
         );
+        countryService.addCountryHibernate("IN", "India");
+        countryService.addCountryHibernate("US", "United States");
     }
+
 }
