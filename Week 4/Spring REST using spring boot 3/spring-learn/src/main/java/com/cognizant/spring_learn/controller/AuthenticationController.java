@@ -18,7 +18,6 @@ public class AuthenticationController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationController.class);
 
-    // Use a strong 256-bit key (32+ characters)
     private final String secret = "mySuperSecretKeyForJwtSigning123456!";
     private final Key key = Keys.hmacShaKeyFor(secret.getBytes());
 
@@ -50,7 +49,7 @@ public class AuthenticationController {
         return Jwts.builder()
                 .setSubject(user)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 20 * 60 * 1000)) // 20 min
+                .setExpiration(new Date(System.currentTimeMillis() + 20 * 60 * 1000)) 
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
