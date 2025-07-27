@@ -1,0 +1,11 @@
+.card {
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+dt{
+    font-weight: 500;
+}
