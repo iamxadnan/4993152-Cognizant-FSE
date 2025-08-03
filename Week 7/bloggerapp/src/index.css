@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.mystyle {
+  margin: 20px;
+  border-right: 3px solid green;
+  padding: 10px;
+}
+
+.st2 {
+  margin: 20px;
+  border-right: 3px solid green;
+  padding: 10px;
+}
+
+.v1 {
+  margin: 20px;
+  padding: 10px;
+}
