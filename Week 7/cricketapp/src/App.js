@@ -4,7 +4,7 @@ import IndianPlayers from './components/IndianPlayers'
 
 function App() {
 
-  let flag=false; // change this to false to see Indian Players
+  let flag=true; // change this to false to see Indian Players
 
   return (
     <div>
