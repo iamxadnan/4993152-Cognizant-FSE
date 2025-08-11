@@ -1,0 +1,2 @@
+Inside log folder
+all the log files are removed and then i pushed this code
