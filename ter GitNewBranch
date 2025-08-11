@@ -1,0 +1,14 @@
+[1mdiff --git a/Week 8/Exercise2/branchfile.txt b/Week 8/Exercise2/branchfile.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..70ab14d[m
+[1m--- /dev/null[m
+[1m+++ b/Week 8/Exercise2/branchfile.txt[m	
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mThis is a file in GitNewBranch[m
+[1mdiff --git a/Week 8/Exercise2/branchfolder/info.txt b/Week 8/Exercise2/branchfolder/info.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e5c5dd8[m
+[1m--- /dev/null[m
+[1m+++ b/Week 8/Exercise2/branchfolder/info.txt[m	
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mInside branch folder[m
